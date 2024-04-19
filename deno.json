@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "start": "deno run -A --env main.ts",
+    "ngrok": "ngrok http 8000"
+  },
+  "imports": {
+    "@discord-applications/app": "jsr:@discord-applications/app@^0.0.4"
+  }
+}
