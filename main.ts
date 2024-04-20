@@ -2,7 +2,6 @@ import {
   ApplicationCommandOptionType,
   AppSchema,
   createApp,
-  InteractionResponseType,
 } from "@discord-applications/app";
 import {
   DISCORD_APPLICATION_ID,
@@ -36,6 +35,11 @@ export const dndSchema = {
                   disadvantage: "disadvantage",
                 },
               },
+              "comment": {
+                type: ApplicationCommandOptionType.String,
+                description: "A comment to add to the roll",
+                required: false,
+              },
             },
           },
         },
@@ -62,7 +66,8 @@ if (import.meta.main) {
             interaction.data.parsedOptions["dice-expression"];
           const advOrDisadv =
             interaction.data.parsedOptions["advantage-or-disadvantage"];
-          return handleRollCommand({ diceExpression, advOrDisadv });
+          const comment = interaction.data.parsedOptions["comment"];
+          return handleRollCommand({ diceExpression, advOrDisadv, comment });
         },
       },
     },

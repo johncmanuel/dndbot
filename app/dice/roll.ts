@@ -8,6 +8,7 @@ import { sendMessageWithSource } from "dndbot/app/discord/message.ts";
 export interface RollCommandOptions {
   diceExpression: string;
   advOrDisadv: string | undefined;
+  comment: string | undefined;
 }
 
 export const handleRollCommand = (options: RollCommandOptions) => {
@@ -24,7 +25,10 @@ export const handleRollCommand = (options: RollCommandOptions) => {
     else if (isNatural20(rolls, diceType)) return sendNatural20Msg();
 
     return sendMessageWithSource(
-      `Rolled ${numDice}d${diceType}+${modifier}: [${rolls}]+${modifier} = ${rollsSum}`,
+      contentWithPrefix(
+        `Rolled ${numDice}d${diceType} + ${modifier}: [${rolls}] + ${modifier} = ${rollsSum}`,
+        options.comment,
+      ),
     );
   }
 
@@ -45,10 +49,15 @@ export const handleRollCommand = (options: RollCommandOptions) => {
     else if (isNatural20(rolls, diceType)) return sendNatural20Msg();
 
     return sendMessageWithSource(
-      `Rolled ${numDice}d${diceType}+${modifier} with ${options.advOrDisadv}: = [${newRolls}] + ${modifier} = ${newSum}`,
+      contentWithPrefix(
+        `Rolled ${numDice}d${diceType}+${modifier} with ${options.advOrDisadv}: = [${newRolls}] + ${modifier} = ${newSum}`,
+        options.comment,
+      ),
     );
   }
 
+  // The logic flow shouldn't get to this point, but if it does,
+  // the user probably rolled a natural 1 on slash commands checks
   return sendMessageWithSource(
     "Hmm... something went wrong. You probably rolled a natural 1.",
   );
@@ -120,3 +129,11 @@ export const isNatural1 = (rolls: number[], diceType: number) =>
 
 export const isNatural20 = (rolls: number[], diceType: number) =>
   rolls.length === 1 && rolls[0] === 20 && diceType === 20;
+
+// Adds a prefix to the content if it exists
+export const contentWithPrefix = (
+  content: string,
+  prefix: string | undefined,
+) => {
+  return prefix ? `${prefix}: ${content}` : content;
+};
