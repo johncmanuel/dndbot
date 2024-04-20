@@ -28,7 +28,7 @@ Example usage:
 
 ```
 # The bot uses Discord's built-in slash commands
-/dnd dice roll 3d8+2
+/dnd dice roll 3d8
 /dnd dice roll 1d20+8 advantage
 /dnd dice roll 8d4+4 disadvantage
 ```
