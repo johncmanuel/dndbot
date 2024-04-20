@@ -48,6 +48,54 @@
           "store_path": "/nix/store/llj65gnwvd45ddsgqx655v92imh7yb5m-deno-1.41.3"
         }
       }
+    },
+    "ngrok@3.7.0": {
+      "last_modified": "2024-04-01T22:53:36-04:00",
+      "resolved": "github:NixOS/nixpkgs/080a4a27f206d07724b88da096e27ef63401a504#ngrok",
+      "source": "devbox-search",
+      "version": "3.7.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/k56hgy2nq1s08ipdpr6zh5k411w6vxw6-ngrok-3.7.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/k56hgy2nq1s08ipdpr6zh5k411w6vxw6-ngrok-3.7.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/zdzq9kln3kpp0iqwyink0819hhax3j5h-ngrok-3.7.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/zdzq9kln3kpp0iqwyink0819hhax3j5h-ngrok-3.7.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/nwdk7nlvxwsafrq6mrq0hyqy4xw55n17-ngrok-3.7.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/nwdk7nlvxwsafrq6mrq0hyqy4xw55n17-ngrok-3.7.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/v03h7agjm7078kp65yxrxwzwafamwwyn-ngrok-3.7.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/v03h7agjm7078kp65yxrxwzwafamwwyn-ngrok-3.7.0"
+        }
+      }
     }
   }
 }

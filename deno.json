@@ -4,6 +4,8 @@
     "ngrok": "ngrok http 8000"
   },
   "imports": {
-    "@discord-applications/app": "jsr:@discord-applications/app@^0.0.4"
-  }
+    "@discord-applications/app": "jsr:@discord-applications/app@^0.0.4",
+    "dndbot/": "./"
+  },
+  "lock": "./deno.lock"
 }
