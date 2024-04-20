@@ -32,3 +32,7 @@ Example usage:
 /dnd dice roll 1d20+8 advantage
 /dnd dice roll 8d4+4 disadvantage
 ```
+
+## Credits
+
+1. [Ethan](https://github.com/EthanThatOneKid) for making a goated Deno library: [discord_app](https://github.com/EthanThatOneKid/discord_app)
