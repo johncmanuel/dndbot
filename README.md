@@ -26,7 +26,7 @@ DISCORD_TOKEN=""
 
 ## /dnd dice roll
 
-Arguments: (dice-expression) (advantage-or-disadvantage)
+Arguments: (dice-expression) (advantage-or-disadvantage) (comment)
 
 Example usage:
 
@@ -35,6 +35,8 @@ Example usage:
 /dnd dice roll 3d8
 /dnd dice roll 1d20+8 advantage
 /dnd dice roll 8d4+4 disadvantage
+/dnd dice roll 1d20 "wisdom check"
+/dnd dice roll 1d20+2 advantage "arcana check on writing in ancient spellbook"
 ```
 
 ## Credits
