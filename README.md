@@ -5,6 +5,7 @@ Discord helper bot to help with future DnD sessions on Discord
 ## TODO
 
 1. Make commands for most commonly used dice rolls (i.e checks, saving throws, attack rolls, etc)
+2. Refactor duplicate code
 
 ## Setup
 

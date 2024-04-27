@@ -64,7 +64,10 @@ export const handleRollCommand = (options: RollCommandOptions) => {
 };
 
 // Parses a dice expression and returns an object with
-// the number of dice, dice type, and modifier
+// the number of dice, dice type, and modifier.
+// The regex enables multiple dice expressions that are comma
+// separated (i.e 5d4+3, 3d40-3, d4).
+// TODO: Rework function to enable processing multiple dice expressions
 export const evaluateDiceExpression = (expression: string) => {
   // Source for regex:
   // https://www.reddit.com/r/regex/comments/q5kwnk/yet_another_dnd_dice_roller/hg6fhhf/
@@ -115,12 +118,16 @@ export const rollDice = (numDices: number, diceType: number) => {
   return rolls;
 };
 
-export const sendNatural1Msg = () => {
-  return sendMessageWithSource("Natural 1! Critical failure!");
+export const sendNatural1Msg = (message?: string) => {
+  return message
+    ? sendMessageWithSource(message)
+    : sendMessageWithSource("Natural 1! Critical failure!");
 };
 
-export const sendNatural20Msg = () => {
-  return sendMessageWithSource("Natural 20! Critical success!");
+export const sendNatural20Msg = (message?: string) => {
+  return message
+    ? sendMessageWithSource(message)
+    : sendMessageWithSource("Natural 20! Critical success!");
 };
 
 // Assumes 1d20 when calculating natural 1's or 20's
