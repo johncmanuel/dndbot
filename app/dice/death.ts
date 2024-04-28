@@ -1,4 +1,5 @@
 import {
+  advOrDisadvOptions,
   contentWithPrefix,
   isNatural1,
   isNatural20,
@@ -46,7 +47,7 @@ export const handleDeathSavingThrowCommand = (
   }
 
   if (
-    ["advantage", "disadvantage"].includes(
+    advOrDisadvOptions.includes(
       options.advOrDisadv,
     )
   ) {

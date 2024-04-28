@@ -1,4 +1,5 @@
 import {
+  advOrDisadvOptions,
   contentWithPrefix,
   isNatural1,
   isNatural20,
@@ -37,7 +38,7 @@ export const handleD20Command = (options: CheckCommandOptions) => {
   }
 
   if (
-    ["advantage", "disadvantage"].includes(
+    advOrDisadvOptions.includes(
       options.advOrDisadv,
     )
   ) {

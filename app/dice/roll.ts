@@ -35,7 +35,7 @@ export const handleRollCommand = (options: RollCommandOptions) => {
   // If rolling with advantage, roll again and take the higher value(s).
   // If rolling with disadvantage, roll again and take the lower value(s).
   if (
-    ["advantage", "disadvantage"].includes(
+    advOrDisadvOptions.includes(
       options.advOrDisadv,
     )
   ) {
@@ -144,3 +144,5 @@ export const contentWithPrefix = (
 ) => {
   return prefix ? `${prefix}: ${content}` : content;
 };
+
+export const advOrDisadvOptions = ["advantage", "disadvantage"];
