@@ -7,6 +7,7 @@ Discord helper bot to help with future DnD sessions on Discord
 1. Make commands for most commonly used dice rolls (i.e checks, saving throws, attack rolls, etc)
 2. Refactor duplicate code
 3. Work on processing multiple, comma-separated dice expressions (i.e 3d8+2, 1d20+1, etc.)
+4. Create an auto-updating GitHub wiki page for all slash commands using a GitHub action and Discord API
 
 ## Setup
 
